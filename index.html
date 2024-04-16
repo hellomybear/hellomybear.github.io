@@ -1,0 +1,336 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Bubbleboi</title>
+<link rel="shortcut icon" href="https://hellomybear.github.io/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://hellomybear.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://hellomybear.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Bubbleboi - Atom Feed" href="https://hellomybear.github.io/atom.xml">
+
+    
+
+  <meta name="description" content="Bubble" />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+    <a href="https://hellomybear.github.io/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto ">
+      
+        <header class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
+  <div class="flex-1 order-2 md:order-1 md:pr-16">
+    <div class="text-4xl font-bold text-center md:text-left">
+      Bubbleboi
+    </div>
+    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
+      Bubble
+    </div>
+    
+    
+  </div>
+  <div class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
+    <img class="rounded-full object-cover" src="https://hellomybear.github.io/images/avatar.png?v=1713277899953" alt="Bubbleboi" width="100%" height="100%">
+  </div>
+</header>
+      
+
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/recentlyread/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          最近阅读
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2024-04-14</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+我认为你不应该关注别人的失败，甚至别人的成功。你需要做的——也是出乎意料的困难——是定义你自己世界的一部分的成功，并为此而努力。非货币成功，因为同样，金钱滞后。
+
+我一直喜欢Paul Ford的写作，最近得知他一直在为他的初创公司Aboa...
+      </div>
+      <a href="https://hellomybear.github.io/post/recentlyread/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/hello/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          hello
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2024-04-13</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>hh</p>
+
+      </div>
+      <a href="https://hellomybear.github.io/post/hello/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/感悟/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          感悟💡
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2024-04-02</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        又是忙碌的一周开始，我一如既往地意识到保持所有习惯和产出的挑战。有些，如阅读，易于保持，但另一些，如写作、长期项目、录制音乐，需要专注和专门的时间，很难坚持。
+但我会继续努力保持这些习惯，醒来，继续做好每一件事，比如写作。
+...
+      </div>
+      <a href="https://hellomybear.github.io/post/感悟/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/“冥想空白”/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          ʕ ㅇ ᴥ ㅇʔ 冥想空白
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2024-04-02</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        今天我特别想说一下这个冥想。一直以来，我们都在空白冥想，无非是极点的延伸，比如想象、幻想、意想等，都是冥想的衍射。
+作为一个博客爱折腾的人来说，我从2年前就在构思博客、品牌、写作内容等，经历了wordpress+腾讯云轻量服务器，博客暂未成...
+      </div>
+      <a href="https://hellomybear.github.io/post/“冥想空白”/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/认真对待一切/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          认真对待一切🏷
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2024-04-02</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+非常努力地工作，非常认真地对待一切
+macwright
+
+之前我就说过：大多数工作不会给你学习的时间许多工作，特别是在技术领域，
+没有真正的、有意的教育成分。没有预留的学习时间，没有时间练习，也没有专门的讲师。
+你在大学里学到的东西不太可...
+      </div>
+      <a href="https://hellomybear.github.io/post/认真对待一切/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/写作的难题/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          写作的难题📦
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2024-04-02</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        出于许多不同的原因，写作很酷。然而，我发现它对我有一个负面的副作用。让我解释一下。通常写作是以下过程的最后一步：
+观察一些东西-可以是外部世界，也可以是我的感受
+
+一旦我脑子里一切都清楚了，我就准备把它写下来。
+花点时间思考和反思。甚至可能...
+      </div>
+      <a href="https://hellomybear.github.io/post/写作的难题/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/summer-early/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          初夏☀️
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2024-04-01</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        初夏的味道，不知你们感受到吗，甜甜的、冰冰的以及暖暖的。漫漫的水汽，枫树的幼芽，那已换下的春装，额上滴滴的汗水，我想初夏马上就要来临。清晨一缕刺眼的阳光照在床褥上，发出初夏的味道，暖暖的凉凉的好舒服。
+初夏的早晨特别温馨，令人沉迷，油绿的草...
+      </div>
+      <a href="https://hellomybear.github.io/post/summer-early/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/think/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          一个感悟💡
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2024-03-05</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+人这一辈子，本来寿命极短，所以做出重大决定的时刻很多，做决定不可怕，可怕的是不敢相信自己做出的决定。
+
+
+      </div>
+      <a href="https://hellomybear.github.io/post/think/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/novel”/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          🪴novel
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2024-02-28</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+写作是一种表达想法的途径，更是一种记录美好事物的工具，
+学会写作的最重要的一点就是要坚持、忍受寂寞、忘我地写，
+
+儒勒-雷纳德说过
+
+写作是不被打扰的最佳谈话方式。
+
+我相信
+
+一个人越努力，越幸运。
+
+
+...
+      </div>
+      <a href="https://hellomybear.github.io/post/novel”/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/recently/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          🌵recently
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2024-02-19</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        今天挺好，只是发现某服务超级难用，弃之不会在使用。
+明天将面对更新的挑战，希望要加油。
+我是需要再努力一点了，不然老在这个这地，每天干一样的事情，还要忍受同一个环境下的各种琐事，加油，争取换一个新环境。
+写作正式开始了，不要再磨蹭了，需要m...
+      </div>
+      <a href="https://hellomybear.github.io/post/recently/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://hellomybear.github.io/post/hello-gridea/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Hello Gridea
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2018-12-12</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+
+      </div>
+      <a href="https://hellomybear.github.io/post/hello-gridea/" class="btn">
+        阅读更多
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://hellomybear.github.io/post-images/hello-gridea.png" alt="Hello Gridea">
+    
+  </div>
+  
+      </div>
+
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  
+</footer>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://hellomybear.github.io/media/scripts/main.js"></script>
+</body>
+
+</html>
